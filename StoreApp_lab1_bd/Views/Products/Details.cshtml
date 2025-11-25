@@ -1,0 +1,38 @@
+﻿@model StoreApp_lab1_bd.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h1>Product Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Id)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Id)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Name)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Name)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.BasePrice)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.BasePrice)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.CategoryId)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.CategoryId)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.SupplierId)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.SupplierId)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Details)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Details)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.UpdatedAt)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.UpdatedAt)</dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

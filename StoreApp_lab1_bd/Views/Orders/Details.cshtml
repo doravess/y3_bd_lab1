@@ -1,0 +1,32 @@
+﻿@model StoreApp_lab1_bd.Models.Order
+
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<h1>Order Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Id)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Id)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.CustomerId)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.CustomerId)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.OrderDate)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.OrderDate)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Total)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Total)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Details)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Details)</dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
